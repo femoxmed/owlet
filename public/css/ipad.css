@@ -1,0 +1,219 @@
+/*--media query for ipad *--/
+
+/*potrait*/
+
+
+@media screen 
+and (device-width: 768px) 
+and (device-height: 1024px){
+
+    .bac-top-nav{
+        background-color:yellow;
+        width: 100%;
+        min-height:8vh;
+        }
+        
+
+.man{
+    display: none;
+
+}
+
+
+
+
+.card-components{
+
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    min-height:30vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.041), 0 6px 20px 0 rgba(0, 0, 0, 0.014);
+    border-radius:5px;
+    margin-bottom:50px;
+    color: black;
+    
+        }
+
+}
+
+
+/**end**/
+
+
+
+@media screen 
+and (device-width: 1024px) 
+and (device-height: 768px){
+
+    .card-main-listing{
+        background-color:black;
+        width: 100%;
+        min-height: 50vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 55px;
+        border-radius: 5px;
+        padding: 50px 50px 50px 50px;
+        margin-bottom: 100px;
+    }
+
+
+    .girls{
+        width: 270px;
+       margin-top: 100px;
+       float: left;
+      }
+
+      .man{
+        width: 155px;
+        margin-top:100px;
+    }
+
+
+  
+
+}
+
+/*end*/
+
+
+
+/*media query for ipad pro*/
+
+
+@media screen 
+  and (device-width: 1024px) 
+  and (device-height: 1366px){
+
+    .card-main-listing{
+        background-color:black;
+        width: 100%;
+        min-height: 50vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 55px;
+        border-radius: 5px;
+        padding: 50px 50px 50px 50px;
+        margin-bottom: 100px;
+    }
+
+
+    .bac-top-nav{
+        background-color:yellow;
+        width: 100%;
+        min-height:6vh;
+        } 
+
+        .girls{
+            display: none;
+        }
+
+        .man{
+            margin-top:70px;
+        }
+
+
+        .intro-bac{
+            background-color: black;
+              width: 100%;
+              min-height: 18vh;
+          }
+        
+
+          .bac-img{
+            background-image: url(../images/ok.png);
+            min-height: 25vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -125px;
+            background-color: whitesmoke;
+            background-attachment: fixed;
+            }
+
+
+
+
+            .card-components{
+
+                width: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+                min-height:25vh;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.041), 0 6px 20px 0 rgba(0, 0, 0, 0.014);
+                border-radius:5px;
+                margin-bottom:50px;
+                color: black;
+                
+                    }
+
+
+                    .footer-background{
+
+                        background-color: black;
+                        width: 100%;
+                        min-height: 42vh;
+                        }
+                        
+
+  }
+
+
+
+  /*end*/
+
+
+    /*media query for ipad pro game mode*/
+
+
+@media screen 
+and (device-width: 1366px) 
+and (device-height: 1024px){
+
+.girls{
+    width: 380px;
+    margin-top:50px;
+}
+
+.bac-top-nav{
+    background-color:yellow;
+    width: 100%;
+    min-height:8vh;
+    } 
+
+
+.intro-bac{
+    background-color: black;
+      width: 100%;
+      min-height: 17vh;
+  }
+
+
+  .bac-img{
+    background-image: url(../images/ok.png);
+    min-height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -125px;
+    background-color: whitesmoke;
+    background-attachment: fixed;
+    }
+
+    .card-components{
+
+        min-height:32vh;
+      
+        
+            }
+
+
+}
+
+
+/**end**/

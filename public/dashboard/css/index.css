@@ -1,0 +1,340 @@
+@font-face {
+    font-family: "proxima";
+    src: url("../font/proxima.otf");
+    src:
+    url("../font/proxima.otf") format("otf"),
+   
+    }
+
+    .header-menu{
+        font-family: proxima;
+        color:whitesmoke;
+        padding-left:30px;
+        font-weight:600;
+        font-size:14px;
+       }
+
+       .header-menu-top{
+        margin-top:30px !important;
+        margin-bottom:20px;
+       }
+
+
+.color-2{
+    background-color: black;
+    width: 100%;
+    height:120vh;
+}
+
+.color-3{
+    background-color: whitesmoke;
+    width: 100%;
+    min-height: 120vh;
+}
+
+.bac-color{
+    background-color:white;
+    width: 100%;
+    min-height: 7vh;
+    box-shadow: 2px 3px #88888838;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+
+.brand-logo{
+    width: 35px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+.icon-account{
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.line-divider{
+    border-top: 1px solid rgba(245, 245, 245, 0.199);
+    width: 120%;
+}
+
+a:hover{
+    color:grey;
+    text-decoration: none;
+}
+
+.icon-size{
+    width:22px;
+    float: right;
+}
+
+li{
+    list-style: none;
+    color: grey;
+    font-family: proxima;
+    font-size:13.5px;
+    margin-bottom: 12px;
+}
+
+li:hover{
+    color: yellow;
+}
+
+.btn-dash{
+    float: right;
+    background-color: black;
+    color: white;
+    font-family: proxima;
+    margin-top: 10px;
+    margin-right: 30px;
+    height:4.5vh;
+    border: transparent;
+    border-radius: 3px;
+    width:130px;
+    font-size:14px;
+    font-weight: 700;
+}
+
+
+.btn-dash-2{
+    float: right;
+    background-color: black;
+    color: white;
+    font-family: proxima;
+    margin-top: -130px;
+    margin-right: 30px;
+    height:4.5vh;
+    border: transparent;
+    border-radius: 3px;
+    width:130px;
+    font-size:14px;
+    font-weight: 700;  
+}
+
+.bac-img{
+    background-image: url('../icons/spare.jpeg');
+    background-repeat: no-repeat;
+    min-height: 35vh;
+    background-size: cover;
+
+}
+
+.intro-dash{
+
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top:80px;
+}
+
+.intro-dash-agent{
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top:45px;   
+}
+
+.outro-dash{
+    font-family: proxima;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+
+.market-place-intro{
+
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-top:35px;
+    margin-left: 43px;
+}
+
+.card-panel{
+    width: 80%;
+    background-color: white;
+    min-height:30vh;
+    border-radius: 3px;
+    margin-top:30px;
+    padding: 35px 35px 35px 35px;
+}
+
+.header-card{
+    
+    
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size:14px;   
+}
+
+.card-text-outro{
+    font-family: proxima;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size:14px ;
+}
+
+.arr-right{
+    float: right;
+}
+
+.card-component-module{
+
+    width: 100%;
+    background-color: white;
+    min-height:55vh;
+    border-radius: 3px;
+    margin-top:25px;
+    padding: 35px 35px 35px 35px;
+}
+
+
+.card-component-module-view{
+
+    width: 100%;
+    background-color: white;
+    min-height:fit-content;
+    border-radius: 3px;
+    margin-top:15px;
+    padding: 30px 30px 30px 30px;
+}
+
+
+
+.card-component-module-2{
+
+    width: 100%;
+    background-color: white;
+    min-height: 80vh;
+    border-radius: 3px;
+    margin-top:25px;
+    padding: 35px 35px 35px 35px;
+}
+
+
+.card-component-module-3{
+    width: 100%;
+    background-color: white;
+    min-height: 50vh;
+    border-radius: 3px;
+    margin-top:25px;
+    padding: 35px 35px 35px 35px;
+
+}
+
+
+.input-1{
+    width: 48%;
+    margin-left: 10px;
+    border: 2px solid rgba(192, 192, 192, 0.603);
+    padding: 15px 15px 15px 15px;
+    border-radius: 3px;
+    font-family: proxima;
+   font-size: 15px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+
+}
+
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    color: white;
+    background-color:black;
+    margin-left:10px;
+    width: 220px;
+    height: 55px;
+    font-family: proxima;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+    
+
+}
+
+select{
+    width: 48%;
+    margin-left: 10px;
+    border: 2px solid rgba(192, 192, 192, 0.603);
+    padding: 15px 15px 15px 15px;
+    border-radius: 3px;
+    font-family: proxima;
+   font-size: 15px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+textarea{
+    width: 48%;
+    margin-left: 10px;
+    border: 2px solid rgba(192, 192, 192, 0.603);
+    padding: 15px 15px 15px 15px;
+    border-radius: 3px;
+    font-family: proxima;
+   font-size: 15px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+.round{
+    margin-right: 10px;
+}
+
+
+.bb{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 30px;
+    }
+
+
+    .title-holder{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size:13px; 
+    }
+
+
+    .title-value{
+        font-family: proxima;
+        font-size: 12.5px;
+    
+    }
+
+
+    .modal-title{
+
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size:13px; 
+
+    }
+
+    .btn-modal{
+        background-color: black;
+        color: white;
+        font-family: proxima;
+        border: transparent;
+        min-height: 7vh;
+        width:20%;
+}
+
+
+.btn-dash-create{
+    float: right;
+    background-color: black;
+    color: white;
+    font-family: proxima;
+    width: 15%;
+    min-height:5vh;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+
+.view-edit{
+    color: black !important;
+    margin-left:15px;
+}

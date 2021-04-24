@@ -1,0 +1,36 @@
+:root {
+    --primary: rgb(59, 235, 150);
+    --primary-dark: #074326;
+    --primary-70: #CFFAE5;
+    --primary-50: #9EF5CB;
+    --primary-30: #86F2BE;
+    --primary-10: #55EDA4;
+    --logo:#fff;
+    --sidebar-icon: rgb(45,45,54);
+  }
+
+  .bg-grad-sidebar {
+    background: black;
+    /* background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      rgb(45,45,54)
+      rgb(59, 235, 150),
+    );
+
+    background-image: linear-gradient(
+      0deg,
+      rgb(45,45,54)
+      rgb(59, 235, 150),
+    ); */
+  }
+
+  .router-link-active {
+    font-weight: 800!important;
+    color:   #86F2BE !important;
+}
+
+.router-link-active span {
+    color:   #86F2BE !important;
+}

@@ -1,0 +1,47 @@
+{
+    "name": "kirschbaum-development/nova-inline-relationship",
+    "description": "A Laravel Nova field for displaying relationship properties inline.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.26.2",
+        "orchestra/testing": "^4.0",
+        "phpunit/phpunit": "^8.3",
+        "mockery/mockery": "^1.1",
+        "laravel/nova": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KirschbaumDevelopment\\NovaInlineRelationship\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "KirschbaumDevelopment\\NovaInlineRelationship\\NovaInlineRelationshipServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

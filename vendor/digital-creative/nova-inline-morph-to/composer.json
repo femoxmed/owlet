@@ -1,0 +1,38 @@
+{
+    "name": "digital-creative/nova-inline-morph-to",
+    "description": "A Laravel Nova field for displaying morphTo relationship inline.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "field",
+        "morph",
+        "morphTo",
+        "inline"
+    ],
+    "authors": [
+        {
+            "name": "Rafael Milewski"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DigitalCreative\\InlineMorphTo\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DigitalCreative\\InlineMorphTo\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
