@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->string('restricted')->default('Yes');
             $table->json('meta')->nullable();
+            $table->json('card_detail')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

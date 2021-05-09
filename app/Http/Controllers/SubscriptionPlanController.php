@@ -1,85 +1,92 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\SubscriptionPlan;
+use App\SubscriptionType;
+use App\AppSetting;
+use GuzzleHttp\Client;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SubscriptionPlanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function createPlan(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => ['string', 'required', 'min:3'],
+            'description' => ['string'],
+            // 'duration' => ['string' , 'required'],
+            'interval' => ['required' ,'string'],
+            'amount' => [  'required'],
+        ]);
+
+        // dd('Bearer' . ' ' .  config('app.paystack_seckey'),);
+
+        try {
+            // $validatedData['currency'] = 'USD';
+        //   dd($validatedData);
+            // create a plan
+  
+            $http = new Client();
+
+            $validatedData['amount'] = $validatedData['amount'];
+            $response = $http->request(
+                                'POST',
+                                'https://api.paystack.co/plan',
+                                [
+                                    'json' => $validatedData,
+
+                                    'headers' => [
+                                        'Authorization' => 'Bearer' . ' ' .  config('app.paystack_seckey'),
+                                    ]
+                                ],
+                                // [
+                                //     'headers' => [
+                                //          'Authorization' => 'Bearer' . ' ' .  config('app.paystack_seckey'),
+                                //      ]
+                                //     ]
+                             );
+
+            // dd($response);
+
+             $body = (string) $response->getBody();
+             $response = json_decode($body);
+             if($response->status) {
+                $subType =  SubscriptionPlan::create((array)$response->data);
+
+                return response()->json([
+                    'message' => 'Subscription plan created successfully',
+                     'data' => $subType
+                ], 201);
+             }
+
+
+
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function listPlans()
     {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\SubscriptionPlan  $subscriptionPlan
-     * @return \Illuminate\Http\Response
-     */
-    public function show(SubscriptionPlan $subscriptionPlan)
-    {
-        //
-    }
+        $plans = [];
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\SubscriptionPlan  $subscriptionPlan
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SubscriptionPlan $subscriptionPlan)
-    {
-        //
-    }
+        if(auth() && auth()->user()
+            && !auth()->user()) {
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\SubscriptionPlan  $subscriptionPlan
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, SubscriptionPlan $subscriptionPlan)
-    {
-        //
-    }
+            $plans =  SubscriptionPlan::all();
+        }
+     else {
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\SubscriptionPlan  $subscriptionPlan
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(SubscriptionPlan $subscriptionPlan)
-    {
-        //
-    }
+         $plans =  SubscriptionPlan::where(['status' => 1])->get();
+
+        }
+        return $plans;
+
+}
+
 }

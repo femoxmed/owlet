@@ -40,6 +40,9 @@ return [
     */
 
     'debug' => env('APP_DEBUG', false),
+    'paystack_pubkey' => env('PAYSTACK_PUBKEY', null),
+    'paystack_seckey' => env('PAYSTACK_SECKEY', null),
+    'paystack_verify_url' => env('PAYSTACK_VERIFY_URL'),
 
     /*
     |--------------------------------------------------------------------------
