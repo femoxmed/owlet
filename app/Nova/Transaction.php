@@ -45,7 +45,6 @@ class Transaction extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            ID::make(__('ID'), 'id')->sortable(),
             Text::make('Title')->sortable(),
             Textarea::make('Description')->sortable(),
             Text::make('Amount')->sortable(),

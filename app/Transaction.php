@@ -2,9 +2,8 @@
 
 namespace App;
 
-use App\TransactionType;
 use App\Subscription;
-use App\Alumni;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
 
@@ -18,8 +17,8 @@ class Transaction extends Model implements Auditable
         return $this->belongsTo(Subscription::class);
     }
 
-    public function alumni() {
-        return $this->belongsTo(Alumni::class);
+    public function user() {
+        return $this->belongsTo(User::class);
     }
     // public function transactionType() {
     //     return $this->belongsTo(TransactionType::class);

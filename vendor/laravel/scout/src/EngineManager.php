@@ -32,7 +32,7 @@ class EngineManager extends Manager
     {
         $this->ensureAlgoliaClientIsInstalled();
 
-        UserAgent::addCustomUserAgent('Laravel Scout', '8.6.0');
+        UserAgent::addCustomUserAgent('Laravel Scout', '8.6.1');
 
         $config = SearchConfig::create(
             config('scout.algolia.id'),
@@ -98,6 +98,18 @@ class EngineManager extends Manager
     public function createNullDriver()
     {
         return new NullEngine;
+    }
+
+    /**
+     * Forget all of the resolved engine instances.
+     *
+     * @return $this
+     */
+    public function forgetEngines()
+    {
+        $this->drivers = [];
+
+        return $this;
     }
 
     /**

@@ -15,8 +15,27 @@
         {
             "type": "path",
             "url": "./nova-components/Analytics"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/SubscriptionPlan"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/CreateSubscriptionPlan"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/SubscriptionPlans"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/SubscriptionPlans"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/SubscriptionPlans"
         }
-       
     ],
     "require": {
         "php": "^7.2.5",
@@ -24,12 +43,14 @@
         "coroowicaksono/chart-js-integration": "^0.3.2",
         "devpartners/auditable-log": "^1.0",
         "digital-creative/nova-inline-morph-to": "^0.2.1",
+        "digitalcloud/nova-custom-views": "^1.7",
         "doctrine/dbal": "2.9",
         "ebess/advanced-nova-media-library": "^3.3",
         "emilianotisato/nova-google-autocomplete-field": "^0.7.2",
         "emilianotisato/nova-tinymce": "^1.2",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^6.3",
         "kirschbaum-development/nova-inline-relationship": "^0.3.0",
         "laravel/framework": "^7.0",
         "laravel/nova": "*",
@@ -37,15 +58,18 @@
         "laravel/scout": "^8.6",
         "laravel/tinker": "^2.0",
         "laravel/ui": "2.4",
-        "guzzlehttp/guzzle": "^6.3",
         "maatwebsite/laravel-nova-excel": "^1.2",
         "owen-it/laravel-auditing": "10.0",
+        "plan/create-subscription-plan": "*",
+        "plan/subscription-plan": "*",
         "simonhamp/laravel-nova-csv-import": "^0.1.3",
         "spatie/laravel-medialibrary": "^8.0.0",
         "spatie/laravel-permission": "^3.18",
         "titasgailius/search-relations": "^1.0",
         "user/analytics": "*",
-        "vyuldashev/nova-permission": "^2.10"
+        "vyuldashev/nova-permission": "^2.10",
+        "resources/subscription-plans/new": "*",
+        "resources/subscription_plans/new": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

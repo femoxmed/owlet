@@ -2,9 +2,9 @@
 
 namespace App\Nova;
 
+use Plan\SubscriptionPlan\SubscriptionPlan as SubPlan;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class SubscriptionPlan extends Resource
@@ -42,16 +42,8 @@ class SubscriptionPlan extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('plan_code'),
-            Text::make('interval'),
-            Text::make('amount'),
-            Text::make('status'),
-            Text::make('name'),
-            Text::make('description')
-            
-
+            // SubPlan::make()
         ];
-            // protected $fillable = ['plan_code' , 'interval' , 'amount', 'status' , 'name' , 'description'];
     }
 
     /**

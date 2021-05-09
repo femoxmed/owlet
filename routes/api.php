@@ -55,8 +55,13 @@ Route::group(['middleware' => ['auth-opt:api']], function () {
 
     Route::get('dealer-adverts', 'Api\AdvertController@adverts');
 
-    
-
+    //subscription
+    Route::post('/create-plan', 'Api\SubscriptionTypeController@createPlan');
+    Route::get('/subscriptions', 'Api\SubscriptionController@index');
+    Route::get('/pending-subscribed-users', 'Api\AlumniController@getPendingSubscribedUsers');
+    Route::get('/plans', 'Api\SubscriptionTypeController@listPlans');
+ 
+   
 });
 
 // Authenticated users routes
@@ -66,6 +71,10 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('me', 'Api\LoginController@me');
     Route::post('rate-user', 'Api\RatingController@store');
     Route::post('update-dealer', 'Api\DealerController@updateDealer');
+    
+    //subscribe
+    Route::get('/transactions', 'Api\TransactionController@index');
+    Route::post('/subscribe', 'Api\SubscriptionController@process');
 });
 
 

@@ -11,9 +11,11 @@ use App\Nova\Metrics\DealersPerDay;
 use App\Nova\Metrics\AgentsPerDay;
 use SimonHamp\LaravelNovaCsvImport\LaravelNovaCsvImport;
 use Coroowicaksono\ChartJsIntegration\StackedChart;
+use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Tools\Dashboard;
-
+use Plan\CreateSubscriptionPlan\CreateSubscriptionPlan;
 // coroowicaksono/chart-js-integration
+
 
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
@@ -31,6 +33,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 return $resource::$priority ?? 9999;
             });
             // Nova::script('menuFix', __DIR__.'/../../resources/js/fixMenu.js');
+
+           
+        
     }
 
     /**
@@ -128,9 +133,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
         return [
             new LaravelNovaCsvImport,
-            \Vyuldashev\NovaPermission\NovaPermissionTool::make()
+            \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
             // ->rolePolicy(RolePolicy::class)
             // ->permissionPolicy(PermissionPolicy::class),
+            new CreateSubscriptionPlan
         ];
     }
 
