@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\SubscriptionType;
-use App\AppSetting;
+use App\SubscriptionPlan;
 use GuzzleHttp\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
