@@ -16,7 +16,7 @@ class SubscriptionPlanController extends Controller
             'name' => ['string', 'required', 'min:3'],
             'description' => ['string'],
             // 'duration' => ['string' , 'required'],
-            'interval' => ['required' ,'string'],
+            'interval' => ['required' ,'string'], //daily , weekly , monthly , quarterly and annually
             'amount' => [  'required'],
         ]);
 
