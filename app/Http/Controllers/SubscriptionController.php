@@ -168,7 +168,7 @@ class SubscriptionController extends Controller
                 'txr_ref' => $payload->reference,
                 'charged_amount' => ($payload->amount) /100,
                 'event_type'=> 'card',
-                'alumni_id' => $payload->metadata['alumni_id'],
+                'user_id' => $payload->metadata['user_id'],
                 'merchant_type' => 'paystack'
                 ]);
 
@@ -191,7 +191,7 @@ class SubscriptionController extends Controller
                 Subscription::create([
                     'transaction_id' => $transaction->id ,
                     'subscription_plan_id' => $payload->metadata['subscription_plan_id'],
-                    'alumni_id' =>  $payload->metadata['alumni_id'],
+                    'user_id' =>  $payload->metadata['user_id'],
                     'expiry_date' => $expired_at
                 ]);
 
@@ -289,7 +289,7 @@ class SubscriptionController extends Controller
                  Subscription::create([
                     'transaction_id' => $transaction->id ,
                     'subscription_plan_id' => $subscription_plan->id,
-                    'alumni_id' =>  $user->id,
+                    'user_id' =>  $user->id,
                     'expiry_date' => $expired_at
                 ]);
 
