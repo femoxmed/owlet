@@ -179,7 +179,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\NovaServiceProvider::class,
-        devmtm\NovaCustomViews\NovaCustomViewsServiceProvider::class,
+        // devmtm\NovaCustomViews\NovaCustomViewsServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
 
         //laravel owen it-auditing

@@ -56,10 +56,10 @@ Route::group(['middleware' => ['auth-opt:api']], function () {
     Route::get('dealer-adverts', 'Api\AdvertController@adverts');
 
     //subscription
-    Route::post('/create-plan', 'Api\SubscriptionTypeController@createPlan');
+    Route::post('/create-plan', 'Api\SubscriptionPlanController@createPlan');
     Route::get('/subscriptions', 'Api\SubscriptionController@index');
     Route::get('/pending-subscribed-users', 'Api\AlumniController@getPendingSubscribedUsers');
-    Route::get('/plans', 'Api\SubscriptionTypeController@listPlans');
+    Route::get('/plans', 'Api\SubscriptionPlanController@listPlans');
  
    
 });

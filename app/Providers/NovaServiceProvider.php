@@ -13,7 +13,9 @@ use SimonHamp\LaravelNovaCsvImport\LaravelNovaCsvImport;
 use Coroowicaksono\ChartJsIntegration\StackedChart;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Tools\Dashboard;
-use Plan\CreateSubscriptionPlan\CreateSubscriptionPlan;
+use Plan\PlanType\PlanType;
+use Subscription\Plans\Plans;
+
 // coroowicaksono/chart-js-integration
 
 
@@ -136,7 +138,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
             // ->rolePolicy(RolePolicy::class)
             // ->permissionPolicy(PermissionPolicy::class),
-            new CreateSubscriptionPlan
+            // new PlanType,
+            new Plans
         ];
     }
 

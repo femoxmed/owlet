@@ -4,7 +4,10 @@ namespace App\Nova;
 
 use Plan\SubscriptionPlan\SubscriptionPlan as SubPlan;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class SubscriptionPlan extends Resource
@@ -42,7 +45,13 @@ class SubscriptionPlan extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            // SubPlan::make()
+            Text::make('Name'),
+            Text::make('Plan code')->hideWhenUpdating(),
+            Text::make('Amount')->hideWhenUpdating(),
+            Text::make('Interval')->hideWhenUpdating(),
+            Textarea::make('Description'),
+            Boolean::make('status'),
+
         ];
     }
 

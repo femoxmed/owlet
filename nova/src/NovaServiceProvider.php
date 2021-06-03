@@ -10,6 +10,10 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Tools\Dashboard;
 use Laravel\Nova\Tools\ResourceManager;
+use Resources\SubscriptionPlans\SubscriptionPlans;
+use Plan\PlanType\PlanType;
+
+use Subscription\Plans\Plans;
 
 class NovaServiceProvider extends ServiceProvider
 {
@@ -131,11 +135,21 @@ class NovaServiceProvider extends ServiceProvider
      */
     protected function registerTools()
     {
-        Nova::tools([
+        
+            Nova::tools([
             new Dashboard,
             new ResourceManager,
+      
+
         ]);
     }
+    public function tools()
+        {
+            return [
+                new Plans,
+                new PlanType
+            ];
+        }
 
     /**
      * Register the Nova Carbon macros.
